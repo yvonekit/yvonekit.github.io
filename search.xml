@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/2021/06/20/#%20PlatformInfo/</url>
+    <content><![CDATA[<h2 id="platforminfo"><a href="[#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)" class="header-anchor">#</a> PlatformInfo</h2> <p><img src="[/OpenCore-Install-Guide/assets/img/smbios.46661610.png](https://dortania.github.io/OpenCore-Install-Guide/assets/img/smbios.46661610.png)" alt="PlatformInfo"></p> <div class="custom-block tip"><p class="custom-block-title">Info</p>]]></content>
+  </entry>
+  <entry>
     <title>mac 禁止adobe creative cloud自启动</title>
     <url>/2021/06/20/cloud%E8%87%AA%E5%90%AF%E5%8A%A8/</url>
     <content><![CDATA[<h2 id="我们如何在MacOS上禁用自动启动Adobe-Creative-Cloud"><a href="#我们如何在MacOS上禁用自动启动Adobe-Creative-Cloud" class="headerlink" title="我们如何在MacOS上禁用自动启动Adobe Creative Cloud"></a>我们如何在MacOS上禁用自动启动Adobe Creative Cloud</h2><p>我们打开终端应用程序（默认情况下，在所有的macOS / OS X系统上）。</p>
@@ -15,6 +20,11 @@
       <tags>
         <tag>mac</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>platforminfo</title>
+    <url>/2021/06/20/platforminfo/</url>
+    <content><![CDATA[<span id="more"></span>]]></content>
   </entry>
   <entry>
     <title>史上最完美800G1-USDT oc efi</title>
@@ -397,15 +407,5 @@
 <p>```</p>
 <p>之后部署到远程即可</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>platforminfo</title>
-    <url>/2021/06/20/platforminfo/</url>
-    <content><![CDATA[<span id="more"></span>]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2021/06/20/#%20PlatformInfo/</url>
-    <content><![CDATA[<h2 id="platforminfo"><a href="[#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)" class="header-anchor">#</a> PlatformInfo</h2> <p><img src="[/OpenCore-Install-Guide/assets/img/smbios.46661610.png](https://dortania.github.io/OpenCore-Install-Guide/assets/img/smbios.46661610.png)" alt="PlatformInfo"></p> <div class="custom-block tip"><p class="custom-block-title">Info</p>]]></content>
   </entry>
 </search>
