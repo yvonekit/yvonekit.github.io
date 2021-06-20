@@ -16,6 +16,12 @@
       </tags>
   </entry>
   <entry>
+    <title>test</title>
+    <url>/2021/06/20/test/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/U5BUqUO.gif" alt="Imgur"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>next v8.5.0 如何添加 Valine评论</title>
     <url>/2021/06/19/valine/</url>
     <content><![CDATA[<h2 id="next-v8-5-0-移除了-Valine"><a href="#next-v8-5-0-移除了-Valine" class="headerlink" title="next v8.5.0 移除了 Valine"></a>next v8.5.0 移除了 Valine</h2><p>需要继续使用请安装插件：<a href="https://github.com/next-theme/hexo-next-valine">https://github.com/next-theme/hexo-next-valine</a><br>需要注意将 <code>appid</code> 和 <code>appkey</code> 改为 <code>appId</code> 和 <code>appKey</code>） </p>
