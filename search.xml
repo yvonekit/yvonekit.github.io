@@ -4,6 +4,7 @@
     <title>mac 禁止adobe creative cloud自启动</title>
     <url>/2021/06/20/cloud%E8%87%AA%E5%90%AF%E5%8A%A8/</url>
     <content><![CDATA[<h2 id="我们如何在MacOS上禁用自动启动Adobe-Creative-Cloud"><a href="#我们如何在MacOS上禁用自动启动Adobe-Creative-Cloud" class="headerlink" title="我们如何在MacOS上禁用自动启动Adobe Creative Cloud"></a>我们如何在MacOS上禁用自动启动Adobe Creative Cloud</h2><p>我们打开终端应用程序（默认情况下，在所有的macOS / OS X系统上）。</p>
+<span id="more"></span>
 <p>我们执行命令行：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist</span><br></pre></td></tr></table></figure>
 <p>执行上述命令行后，Adobe Creative Cloud将不再在操作系统启动时自动启动。</p>
@@ -23,7 +24,8 @@
 <li>OC Version: 0.7.0</li>
 <li>Tested OS Version: 11.4 (20F71)</li>
 </ul>
-<h2 id="Working"><a href="#Working" class="headerlink" title="Working"></a>Working</h2><ul>
+<h2 id="Working"><a href="#Working" class="headerlink" title="Working"></a>Working</h2><span id="more"></span>
+<ul>
 <li>WIFI</li>
 <li>Sound</li>
 <li>USB Port(fixed on 0.7.0)</li>
@@ -97,7 +99,7 @@
     <content><![CDATA[<h2 id="next-v8-5-0-移除了-Valine"><a href="#next-v8-5-0-移除了-Valine" class="headerlink" title="next v8.5.0 移除了 Valine"></a>next v8.5.0 移除了 Valine</h2><p>需要继续使用请安装插件：<a href="https://github.com/next-theme/hexo-next-valine">https://github.com/next-theme/hexo-next-valine</a><br>需要注意将 <code>appid</code> 和 <code>appkey</code> 改为 <code>appId</code> 和 <code>appKey</code>） </p>
 <p>安装插件</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install next-theme/hexo-next-valine</span><br></pre></td></tr></table></figure>
-
+<span id="more"></span>
 <p>将以下代码复制到theme _config.yml 608行 填写<code>appId</code> 和 <code>appKey</code> <code>serverURLs</code> serverurls 不写会报401错</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Valine</span></span><br><span class="line"><span class="comment"># For more information: https://valine.js.org, https://github.com/xCss/Valine</span></span><br><span class="line">valine:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">false</span></span><br><span class="line">  appId:  <span class="comment"># your leancloud application appid</span></span><br><span class="line">  appKey:  <span class="comment"># your leancloud application appkey</span></span><br><span class="line">  serverURLs: <span class="comment"># When the custom domain name is enabled, fill it in here</span></span><br><span class="line">  placeholder: Just go go <span class="comment"># comment box placeholder</span></span><br><span class="line">  avatar: mm <span class="comment"># gravatar style</span></span><br><span class="line">  meta: [nick, mail, link] <span class="comment"># Custom comment header</span></span><br><span class="line">  pageSize: 10 <span class="comment"># pagination size</span></span><br><span class="line">  visitor: <span class="literal">false</span> <span class="comment"># leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors&#x27; for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span></span><br><span class="line">  comment_count: <span class="literal">true</span> <span class="comment"># If false, comment count will only be displayed in post page, not in home page</span></span><br><span class="line">  recordIP: <span class="literal">false</span> <span class="comment"># Whether to record the commenter IP</span></span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -117,7 +119,7 @@
 <li>在站点目录下的配置文件_config.yml 中找到以下部分，并修改。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: next #选择博客主题，名字为themes中选择的主题文件夹名称</span><br></pre></td></tr></table></figure>
-
+<span id="more"></span>
 <blockquote>
 <p>下载好主题后，在Hexo中切换主题只需修改站点配置文件中theme属性来配置，想换就换。</p>
 </blockquote>
@@ -187,7 +189,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">back2top:</span><br><span class="line">enable: true  # 是否启用点击返回顶部按钮</span><br><span class="line">sidebar: true  # 是否在侧边栏显示点击返回顶部按钮</span><br><span class="line">scrollpercent: true  # 是否在返回顶部按钮显示已滚动百分比</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h3 id="首页文章不展示全文显示摘要"><a href="#首页文章不展示全文显示摘要" class="headerlink" title="首页文章不展示全文显示摘要"></a>首页文章不展示全文显示摘要</h3><ul>
-<li><p>使用<span id="more"></span>进行手动截断，</p>
+<li><p>使用<!--more-->进行手动截断，</p>
 </li>
 <li><p>或者在 文章头部添加 description: 关于本篇文章的描述</p>
 </li>
@@ -395,5 +397,15 @@
 <p>```</p>
 <p>之后部署到远程即可</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>platforminfo</title>
+    <url>/2021/06/20/platforminfo/</url>
+    <content><![CDATA[<span id="more"></span>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2021/06/20/#%20PlatformInfo/</url>
+    <content><![CDATA[<h2 id="platforminfo"><a href="[#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)" class="header-anchor">#</a> PlatformInfo</h2> <p><img src="[/OpenCore-Install-Guide/assets/img/smbios.46661610.png](https://dortania.github.io/OpenCore-Install-Guide/assets/img/smbios.46661610.png)" alt="PlatformInfo"></p> <div class="custom-block tip"><p class="custom-block-title">Info</p>]]></content>
   </entry>
 </search>

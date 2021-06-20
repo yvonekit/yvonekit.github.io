@@ -2,7 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yvonekit.github.io/2021/06/20/#%20PlatformInfo/</loc>
+    
+    <lastmod>2021-06-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yvonekit.github.io/2021/06/20/cloud%E8%87%AA%E5%90%AF%E5%8A%A8/</loc>
+    
+    <lastmod>2021-06-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yvonekit.github.io/2021/06/20/platforminfo/</loc>
+    
+    <lastmod>2021-06-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yvonekit.github.io/2021/06/20/test/</loc>
+    
+    <lastmod>2021-06-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yvonekit.github.io/2021/06/19/valine/</loc>
     
     <lastmod>2021-06-20</lastmod>
     
@@ -38,20 +66,6 @@
   
   <url>
     <loc>https://yvonekit.github.io/tags/index.html</loc>
-    
-    <lastmod>2021-06-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yvonekit.github.io/2021/06/20/cloud%E8%87%AA%E5%90%AF%E5%8A%A8/</loc>
-    
-    <lastmod>2021-06-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yvonekit.github.io/2021/06/19/valine/</loc>
     
     <lastmod>2021-06-20</lastmod>
     
