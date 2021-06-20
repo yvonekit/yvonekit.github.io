@@ -29,4 +29,26 @@
         <tag>next</tag>
       </tags>
   </entry>
+  <entry>
+    <title>next主题高级配置</title>
+    <url>/2021/06/20/next%E4%B8%BB%E9%A2%98%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>添加菜单选项<br>默认情况下，菜单导航栏有首页、归档、关于三个选项，除此之外笔者还添加了分类、标签和关于。在主题配置文件 中，找到menu属性，并去掉categories、 tags、about的的注释，如下图所示：</p>
+<p>然后在Hexo根目录执行指令如下：</p>
+<p>// 添加分类页面<br>hexo new page “categories”<br>// 添加标签页面<br>hexo new page “tags”<br>// 添加关于页面<br>hexo new page “about”<br>执行完上述指令后，在Hexo根目录/source/文件夹下创建三个文件夹，命名分别为：categories、tags、about文件夹，在这些文件夹中分别会创建一个以index命名的Markdown文件，对这三个Markdown文件内容进行修改，使之分别为：</p>
+<hr>
+<p>title: categories<br>date: 2017-03-12 22:06:24<br>type: “categories”</p>
+<hr>
+<hr>
+<p>title: 标签<br>date: 2017-03-12 17:27:16<br>type: “tags”</p>
+<hr>
+<hr>
+<p>title: about<br>date: 2017-03-12 22:07:26<br>type: “about”</p>
+<hr>
+<p>完成文件的修改，然后部署Hexo即可完成菜单选项的添加。</p>
+<p>添加搜索功能<br>笔者采用的是local search。<br>安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：</p>
+<p>$ npm install hexo-generator-searchdb –save<br>编辑 站点配置文件 （站点根目录下），新增以下内容到任意位置：</p>
+<p>search:<br>  path: search.xml<br>  field: post<br>  format: html<br>  limit: 10000<br>编辑 主题配置文件 （主题目录下），启用本地搜索功能：</p>
+<h1 id="Local-search"><a href="#Local-search" class="headerlink" title="Local search"></a>Local search</h1><p>local_search:<br>  enable: true<br>之后部署到远程即可</p>
+]]></content>
+  </entry>
 </search>
