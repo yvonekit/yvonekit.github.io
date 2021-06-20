@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2021/06/20/#%20PlatformInfo/</url>
-    <content><![CDATA[<h2 id="platforminfo"><a href="[#platforminfo](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html#platforminfo)" class="header-anchor">#</a> PlatformInfo</h2> <p><img src="[/OpenCore-Install-Guide/assets/img/smbios.46661610.png](https://dortania.github.io/OpenCore-Install-Guide/assets/img/smbios.46661610.png)" alt="PlatformInfo"></p> <div class="custom-block tip"><p class="custom-block-title">Info</p>]]></content>
-  </entry>
-  <entry>
     <title>mac 禁止adobe creative cloud自启动</title>
     <url>/2021/06/20/cloud%E8%87%AA%E5%90%AF%E5%8A%A8/</url>
     <content><![CDATA[<h2 id="我们如何在MacOS上禁用自动启动Adobe-Creative-Cloud"><a href="#我们如何在MacOS上禁用自动启动Adobe-Creative-Cloud" class="headerlink" title="我们如何在MacOS上禁用自动启动Adobe Creative Cloud"></a>我们如何在MacOS上禁用自动启动Adobe Creative Cloud</h2><p>我们打开终端应用程序（默认情况下，在所有的macOS / OS X系统上）。</p>
 <span id="more"></span>
 <p>我们执行命令行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">*launchctl unload -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>执行上述命令行后，Adobe Creative Cloud将不再在操作系统启动时自动启动。</p>
 <p>启动Adobe Creative Cloud的命令行的反向是：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">*launchctl load -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">*launchctl load -w /Library/LaunchAgents/com.adobe.AdobeCreativeCloud.plist<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 ]]></content>
       <tags>
@@ -108,10 +103,23 @@
     <url>/2021/06/19/valine/</url>
     <content><![CDATA[<h2 id="next-v8-5-0-移除了-Valine"><a href="#next-v8-5-0-移除了-Valine" class="headerlink" title="next v8.5.0 移除了 Valine"></a>next v8.5.0 移除了 Valine</h2><p>需要继续使用请安装插件：<a href="https://github.com/next-theme/hexo-next-valine">https://github.com/next-theme/hexo-next-valine</a><br>需要注意将 <code>appid</code> 和 <code>appkey</code> 改为 <code>appId</code> 和 <code>appKey</code>） </p>
 <p>安装插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install next-theme/hexo-next-valine</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> next-theme/hexo-next-valine<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <span id="more"></span>
 <p>将以下代码复制到theme _config.yml 608行 填写<code>appId</code> 和 <code>appKey</code> <code>serverURLs</code> serverurls 不写会报401错</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Valine</span></span><br><span class="line"><span class="comment"># For more information: https://valine.js.org, https://github.com/xCss/Valine</span></span><br><span class="line">valine:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">false</span></span><br><span class="line">  appId:  <span class="comment"># your leancloud application appid</span></span><br><span class="line">  appKey:  <span class="comment"># your leancloud application appkey</span></span><br><span class="line">  serverURLs: <span class="comment"># When the custom domain name is enabled, fill it in here</span></span><br><span class="line">  placeholder: Just go go <span class="comment"># comment box placeholder</span></span><br><span class="line">  avatar: mm <span class="comment"># gravatar style</span></span><br><span class="line">  meta: [nick, mail, link] <span class="comment"># Custom comment header</span></span><br><span class="line">  pageSize: 10 <span class="comment"># pagination size</span></span><br><span class="line">  visitor: <span class="literal">false</span> <span class="comment"># leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors&#x27; for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span></span><br><span class="line">  comment_count: <span class="literal">true</span> <span class="comment"># If false, comment count will only be displayed in post page, not in home page</span></span><br><span class="line">  recordIP: <span class="literal">false</span> <span class="comment"># Whether to record the commenter IP</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Valine</span>
+<span class="token comment"># For more information: https://valine.js.org, https://github.com/xCss/Valine</span>
+valine:
+  enable: <span class="token boolean">false</span>
+  appId:  <span class="token comment"># your leancloud application appid</span>
+  appKey:  <span class="token comment"># your leancloud application appkey</span>
+  serverURLs: <span class="token comment"># When the custom domain name is enabled, fill it in here</span>
+  placeholder: Just go go <span class="token comment"># comment box placeholder</span>
+  avatar: mm <span class="token comment"># gravatar style</span>
+  meta: <span class="token punctuation">[</span>nick, mail, link<span class="token punctuation">]</span> <span class="token comment"># Custom comment header</span>
+  pageSize: <span class="token number">10</span> <span class="token comment"># pagination size</span>
+  visitor: <span class="token boolean">false</span> <span class="token comment"># leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span>
+  comment_count: <span class="token boolean">true</span> <span class="token comment"># If false, comment count will only be displayed in post page, not in home page</span>
+  recordIP: <span class="token boolean">false</span> <span class="token comment"># Whether to record the commenter IP</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 ]]></content>
       <tags>
         <tag>next</tag>
@@ -123,68 +131,147 @@
     <content><![CDATA[<h2 id="安装-next-主题"><a href="#安装-next-主题" class="headerlink" title="安装 next 主题"></a>安装 next 主题</h2><ol>
 <li>在git上克隆主题文件</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <ol>
 <li>在站点目录下的配置文件_config.yml 中找到以下部分，并修改。</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: next #选择博客主题，名字为themes中选择的主题文件夹名称</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">theme: next #选择博客主题，名字为themes中选择的主题文件夹名称<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <span id="more"></span>
 <blockquote>
 <p>下载好主题后，在Hexo中切换主题只需修改站点配置文件中theme属性来配置，想换就换。</p>
 </blockquote>
 <ol>
 <li><p>next主题中提供了四种样式，选择自己喜欢的。 在 themes-&gt; next -&gt;_config.yml 文件中找到一下代码，去掉 # 即可选择主题样式。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none"># Schemes
+#scheme: Muse
+#scheme: Mist
+#scheme: Pisces
+scheme: Gemini<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>3.1 当 选择 Mist 主题样式时，解决菜单样式居中</p>
 <ul>
 <li><p>在 themes/next/source/css/_schemes/Mist/_menu.styl 文件下，添加 text-align 属性</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.menu &#123;</span><br><span class="line">  text-align:right;</span><br><span class="line">  margin: 0;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">.menu &#123;
+  text-align:right;
+  margin: 0;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p>hexo常用命令</p>
 </li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> hexo n &quot;博客名称&quot;  =&gt; hexo new &quot;博客名称&quot;   #这两个都是创建新文章，前者是简写模式</span><br><span class="line">$ hexo p  =&gt; hexo publish</span><br><span class="line">$ hexo g  =&gt; hexo generate  #生成</span><br><span class="line">$ hexo s  =&gt; hexo server  #启动服务预览</span><br><span class="line">$ hexo d  =&gt; hexo deploy  #部署</span><br><span class="line"></span><br><span class="line">$ hexo server   #Hexo 会监视文件变动并自动更新，无须重启服务器。</span><br><span class="line">$ hexo server -s   #静态模式</span><br><span class="line">$ hexo server -p 5000   #更改端口</span><br><span class="line">$ hexo server -i 192.168.1.1   #自定义IP</span><br><span class="line">$ hexo clean   #清除缓存，网页正常情况下可以忽略此条命令</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none"> hexo n &quot;博客名称&quot;  &#x3D;&gt; hexo new &quot;博客名称&quot;   #这两个都是创建新文章，前者是简写模式
+$ hexo p  &#x3D;&gt; hexo publish
+$ hexo g  &#x3D;&gt; hexo generate  #生成
+$ hexo s  &#x3D;&gt; hexo server  #启动服务预览
+$ hexo d  &#x3D;&gt; hexo deploy  #部署
+
+$ hexo server   #Hexo 会监视文件变动并自动更新，无须重启服务器。
+$ hexo server -s   #静态模式
+$ hexo server -p 5000   #更改端口
+$ hexo server -i 192.168.1.1   #自定义IP
+$ hexo clean   #清除缓存，网页正常情况下可以忽略此条命令<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><ol>
 <li><p>在 阿里云，腾讯云这些网站购买域名(需要实名认证)，或者翻墙买 .me, .io 这些域名(有钱大佬可以尝试，不知道访问这些域名需不需要翻墙)。</p>
 </li>
 <li><p>在 站点目录下的source目录下创建文件 CNAME，写上自己的域名(如我自己的)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">frontwhite.xyz</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">frontwhite.xyz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
 <h2 id="菜单设置"><a href="#菜单设置" class="headerlink" title="菜单设置"></a>菜单设置</h2><h3 id="菜单设置-1"><a href="#菜单设置-1" class="headerlink" title="菜单设置"></a>菜单设置</h3><p>用于设置博客上方导航栏显示，在主题配置文件_config.yml 中修改。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home  #首页</span><br><span class="line">  #about: /about/ || user  #关于</span><br><span class="line">  tags: /tags/ || tags  #标签</span><br><span class="line">  categories: /categories/ || th  #分类</span><br><span class="line">  #archives: /archives/ || archive #归档</span><br><span class="line">  #schedule: /schedule/ || calendar  #日程表</span><br><span class="line">  #sitemap: /sitemap.xml || sitemap  #站点地图</span><br><span class="line">  commonweal: /404/ || heartbeat   # 404页面</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">menu:
+  home: &#x2F; || home  #首页
+  #about: &#x2F;about&#x2F; || user  #关于
+  tags: &#x2F;tags&#x2F; || tags  #标签
+  categories: &#x2F;categories&#x2F; || th  #分类
+  #archives: &#x2F;archives&#x2F; || archive #归档
+  #schedule: &#x2F;schedule&#x2F; || calendar  #日程表
+  #sitemap: &#x2F;sitemap.xml || sitemap  #站点地图
+  commonweal: &#x2F;404&#x2F; || heartbeat   # 404页面<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>只是在menu选项中 <strong>去掉#</strong>  还不能让标签页面、分类页面生效，需要我们手动创建。</p>
 </blockquote>
 <h3 id="创建标签，分类页面"><a href="#创建标签，分类页面" class="headerlink" title="创建标签，分类页面"></a>创建标签，分类页面</h3><p>打开命令行，进入博客所在文件夹。执行以下命令，创建标签和分类。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  hexo new page tags</span><br><span class="line">  hexo new page categories</span><br><span class="line">同时，在/source目录下会生成一个tags文件夹，里面包含一个index.md文件。</span><br><span class="line"></span><br><span class="line">+ 修改生成的source/tags/index.md文件,加上type: &quot;tags&quot;,才行，title可以随便写</span><br><span class="line">​```</span><br><span class="line">---</span><br><span class="line">title: 学习之路</span><br><span class="line">date: 2019-12-21 11:13:45</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br><span class="line">​```</span><br><span class="line"></span><br><span class="line">+ 修改生成的source/tags/categories.md文件,加上type: &quot;categories&quot;</span><br><span class="line">​```</span><br><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">date: 2019-12-18 19:45:11</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br><span class="line">​```</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">  hexo new page tags
+  hexo new page categories
+同时，在&#x2F;source目录下会生成一个tags文件夹，里面包含一个index.md文件。
+
++ 修改生成的source&#x2F;tags&#x2F;index.md文件,加上type: &quot;tags&quot;,才行，title可以随便写
+​&#96;&#96;&#96;
+---
+title: 学习之路
+date: 2019-12-21 11:13:45
+type: &quot;tags&quot;
+---
+​&#96;&#96;&#96;
+
++ 修改生成的source&#x2F;tags&#x2F;categories.md文件,加上type: &quot;categories&quot;
+​&#96;&#96;&#96;
+---
+title: 分类
+date: 2019-12-18 19:45:11
+type: &quot;categories&quot;
+---
+​&#96;&#96;&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="文章标签和分类"><a href="#文章标签和分类" class="headerlink" title="文章标签和分类"></a>文章标签和分类</h3><p>在所写的文章里的头部，加上以下代码，即可在标签页看到标签个数和标签，分类也是如此</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> ---</span><br><span class="line">tags: [学习，小白]</span><br><span class="line">categories: test</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none"> ---
+tags: [学习，小白]
+categories: test
+---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>这里的tags和categories就是给文章加上标签和分类，两者的区别就是categories是有层级的，像上面那样分类里Next就是Hexo的子类，Hexo是不支持指定多个同级分类的。</p>
 </blockquote>
-<h3 id="图标和内容量"><a href="#图标和内容量" class="headerlink" title="图标和内容量"></a>图标和内容量</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu_settings:</span><br><span class="line">  icons: true  # 是否显示各个页面的图标</span><br><span class="line">  badges: false  # 是否显示分类/标签/归档页的内容量</span><br></pre></td></tr></table></figure>
+<h3 id="图标和内容量"><a href="#图标和内容量" class="headerlink" title="图标和内容量"></a>图标和内容量</h3><pre class="line-numbers language-none"><code class="language-none">menu_settings:
+  icons: true  # 是否显示各个页面的图标
+  badges: false  # 是否显示分类&#x2F;标签&#x2F;归档页的内容量<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="404页面创建"><a href="#404页面创建" class="headerlink" title="404页面创建"></a>404页面创建</h3><ul>
 <li><p>在站点目录下使用命令创建404页面。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page 404</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">hexo new page 404<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><p>在站点目录下的 source/404/index.md,添加以下代码，并把 homePageUrl的值换成自己的博客地址。这样 腾讯公益404就成功了。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8;&quot;/&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</span><br><span class="line">  &lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;</span><br><span class="line">  &lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;/&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://qzone.qq.com/gy/404/style/404style.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;script type=&quot;text/plain&quot; src=&quot;http://www.qq.com/404/search_children.js&quot;</span><br><span class="line">          charset=&quot;utf-8&quot; homePageUrl=&quot;https://frontwhite.xyz&quot;</span><br><span class="line">          homePageName=&quot;回到我的主页&quot;&gt;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://qzone.qq.com/gy/404/data.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://qzone.qq.com/gy/404/page.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv&#x3D;&quot;content-type&quot; content&#x3D;&quot;text&#x2F;html;charset&#x3D;utf-8;&quot;&#x2F;&gt;
+  &lt;meta http-equiv&#x3D;&quot;X-UA-Compatible&quot; content&#x3D;&quot;IE&#x3D;edge,chrome&#x3D;1&quot; &#x2F;&gt;
+  &lt;meta name&#x3D;&quot;robots&quot; content&#x3D;&quot;all&quot; &#x2F;&gt;
+  &lt;meta name&#x3D;&quot;robots&quot; content&#x3D;&quot;index,follow&quot;&#x2F;&gt;
+  &lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;https:&#x2F;&#x2F;qzone.qq.com&#x2F;gy&#x2F;404&#x2F;style&#x2F;404style.css&quot;&gt;
+&lt;&#x2F;head&gt;
+&lt;body&gt;
+  &lt;script type&#x3D;&quot;text&#x2F;plain&quot; src&#x3D;&quot;http:&#x2F;&#x2F;www.qq.com&#x2F;404&#x2F;search_children.js&quot;
+          charset&#x3D;&quot;utf-8&quot; homePageUrl&#x3D;&quot;https:&#x2F;&#x2F;frontwhite.xyz&quot;
+          homePageName&#x3D;&quot;回到我的主页&quot;&gt;
+  &lt;&#x2F;script&gt;
+  &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;qzone.qq.com&#x2F;gy&#x2F;404&#x2F;data.js&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;&#x2F;script&gt;
+  &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;qzone.qq.com&#x2F;gy&#x2F;404&#x2F;page.js&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;&#x2F;script&gt;
+&lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>在themes/next/languages/zh-CN.yml 中可以修改 菜单栏 的名字</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  schedule: 日程表</span><br><span class="line">  sitemap: 站点地图</span><br><span class="line">  commonweal: 公益404  # 修改为 公益</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">menu:
+  home: 首页
+  archives: 归档
+  categories: 分类
+  tags: 标签
+  about: 关于
+  search: 搜索
+  schedule: 日程表
+  sitemap: 站点地图
+  commonweal: 公益404  # 修改为 公益<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h2 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h2><p>都在themes/next 文件下进行设置。</p>
 <p>### 设置头像</p>
 <ul>
 <li>找自己喜欢的图，放至next/source/images/文件夹下。在 _config.yml 文件下，找到以下的配置,可以自行配置。</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar: </span><br><span class="line">  url:  /images/avatat.jpg   #头像本地地址</span><br><span class="line">  rounded: true   #头像是否设置为圆形</span><br><span class="line">  rotated: true   #是否产生鼠标移入头像，有旋转动动画</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none"># Sidebar Avatar
+avatar: 
+  url:  &#x2F;images&#x2F;avatat.jpg   #头像本地地址
+  rounded: true   #头像是否设置为圆形
+  rotated: true   #是否产生鼠标移入头像，有旋转动动画<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="设置网站图标"><a href="#设置网站图标" class="headerlink" title="设置网站图标"></a>设置网站图标</h3><ul>
 <li><p>网站图标库: <a href="https://www.easyicon.net/">easyicon</a>, <a href="https://www.iconfont.cn/">icon</a></p>
@@ -192,11 +279,18 @@
 <li><p>下载16x16以及32x32大小的PNG格式图标，置于/themes/next/source/images/下</p>
 </li>
 <li><p>打开themes/next/下的_config.yml，查找favicon，替换 small 和 medium 的图标</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">favicon:</span><br><span class="line">small: /images/favicon.png  </span><br><span class="line">medium: /images/favicon.png</span><br><span class="line">apple_touch_icon: /images/apple-touch-icon-next.png</span><br><span class="line">safari_pinned_tab: /images/logo.svg</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">favicon:
+small: &#x2F;images&#x2F;favicon.png  
+medium: &#x2F;images&#x2F;favicon.png
+apple_touch_icon: &#x2F;images&#x2F;apple-touch-icon-next.png
+safari_pinned_tab: &#x2F;images&#x2F;logo.svg<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="浏览文章进度条"><a href="#浏览文章进度条" class="headerlink" title="浏览文章进度条"></a>浏览文章进度条</h3><ul>
 <li><p>在 _config.yml文件中找到 back2top, 修改 scrollpercent 为 true，</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">back2top:</span><br><span class="line">enable: true  # 是否启用点击返回顶部按钮</span><br><span class="line">sidebar: true  # 是否在侧边栏显示点击返回顶部按钮</span><br><span class="line">scrollpercent: true  # 是否在返回顶部按钮显示已滚动百分比</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">back2top:
+enable: true  # 是否启用点击返回顶部按钮
+sidebar: true  # 是否在侧边栏显示点击返回顶部按钮
+scrollpercent: true  # 是否在返回顶部按钮显示已滚动百分比<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="首页文章不展示全文显示摘要"><a href="#首页文章不展示全文显示摘要" class="headerlink" title="首页文章不展示全文显示摘要"></a>首页文章不展示全文显示摘要</h3><ul>
 <li><p>使用<!--more-->进行手动截断，</p>
@@ -204,44 +298,161 @@
 <li><p>或者在 文章头部添加 description: 关于本篇文章的描述</p>
 </li>
 <li><p>自动形成摘要，在 主题配置文件 中添加：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">auto_excerpt:</span><br><span class="line">  enable: true</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">auto_excerpt:
+  enable: true
+  length: 150<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>默认截取的长度为 150 字符，可以根据需要自行设定</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scroll_to_more: true  #点击阅读全文后是否跳到&lt;!--more--&gt;标记处,设为false时点击阅读全文可以从头阅读</span><br><span class="line"></span><br><span class="line">save_scroll: false #自动保存每篇文章或页面上一次滚动的地方</span><br><span class="line"></span><br><span class="line">excerpt_description: true #自动在首页对文章进行摘要描述作为前言文本</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">scroll_to_more: true  #点击阅读全文后是否跳到&lt;!--more--&gt;标记处,设为false时点击阅读全文可以从头阅读
+
+save_scroll: false #自动保存每篇文章或页面上一次滚动的地方
+
+excerpt_description: true #自动在首页对文章进行摘要描述作为前言文本<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h3 id="设置字体和字体大小"><a href="#设置字体和字体大小" class="headerlink" title="设置字体和字体大小"></a>设置字体和字体大小</h3><ul>
 <li>在 _config.yml文件中找到,修改famil和size，或者自己找一个字体镜像库，修改host的链接</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">font:  </span><br><span class="line">  enable: true  #开启设置</span><br><span class="line">  host:   # 默认 google 字体库</span><br><span class="line">  global: #全局设置</span><br><span class="line">    external: true </span><br><span class="line">    family: 微软雅黑  #设置字体样式</span><br><span class="line">    size: 1  #设置字体大小，默认是1 (16px)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">font:  
+  enable: true  #开启设置
+  host:   # 默认 google 字体库
+  global: #全局设置
+    external: true 
+    family: 微软雅黑  #设置字体样式
+    size: 1  #设置字体大小，默认是1 (16px)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="右上角的Follow-Github"><a href="#右上角的Follow-Github" class="headerlink" title="右上角的Follow-Github"></a>右上角的Follow-Github</h3><ul>
 <li><p>如果你想大家在看博客的时候能快速链接到你的Github，不妨设置Github_banner(颜色为黑白)，设置如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">github_banner:</span><br><span class="line">  enable: true  #开启</span><br><span class="line">  permalink: https://github.com/whitedesignd #你的GitHub地址</span><br><span class="line">  title: Follow me on GitHub</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">github_banner:
+  enable: true  #开启
+  permalink: https:&#x2F;&#x2F;github.com&#x2F;whitedesignd #你的GitHub地址
+  title: Follow me on GitHub<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li><p>觉得黑白的图标不好看，可以使用 <a href="https://github.blog/2008-12-19-github-ribbons/">GitHub Ribbons</a> 和 <a href="http://tholman.com/github-corners/">GitHub Corners</a>中的任何一款图标。进入网站，复制代码。(我选择的是蓝色的)</p>
 <p>(1) 在 themes/next/layout/_layout.swig 下,在末尾下加入代码。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">window.addEventListener(&#x27;DOMContentLoaded&#x27;, () =&gt; &#123;</span><br><span class="line">  let icon = document.querySelector(&quot;.github-corner&quot;);</span><br><span class="line">  icon.innerHTML  = `&lt;svg width=&quot;80&quot; height=&quot;80&quot; viewBox=&quot;0 0 250 250&quot; style=&quot;fill:#70B7FD;color:#fff;aria-hidden=&quot;true&quot;&gt;</span><br><span class="line">      &lt;path d=&quot;M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z&quot;&gt;&lt;/path&gt;</span><br><span class="line">      &lt;path d=&quot;M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2&quot; fill=&quot;currentColor&quot; style=&quot;transform-origin:130px 106px&quot; class=&quot;octo-arm&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z&quot; fill=&quot;currentColor&quot; class=&quot;octo-body&quot;&gt;</span><br><span class="line">      &lt;/path&gt;</span><br><span class="line">  &lt;/svg&gt;`;</span><br><span class="line">&#125;,false);</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">window.addEventListener(&#39;DOMContentLoaded&#39;, () &#x3D;&gt; &#123;
+  let icon &#x3D; document.querySelector(&quot;.github-corner&quot;);
+  icon.innerHTML  &#x3D; &#96;&lt;svg width&#x3D;&quot;80&quot; height&#x3D;&quot;80&quot; viewBox&#x3D;&quot;0 0 250 250&quot; style&#x3D;&quot;fill:#70B7FD;color:#fff;aria-hidden&#x3D;&quot;true&quot;&gt;
+      &lt;path d&#x3D;&quot;M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z&quot;&gt;&lt;&#x2F;path&gt;
+      &lt;path d&#x3D;&quot;M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2&quot; fill&#x3D;&quot;currentColor&quot; style&#x3D;&quot;transform-origin:130px 106px&quot; class&#x3D;&quot;octo-arm&quot;&gt;&lt;&#x2F;path&gt;&lt;path d&#x3D;&quot;M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z&quot; fill&#x3D;&quot;currentColor&quot; class&#x3D;&quot;octo-body&quot;&gt;
+      &lt;&#x2F;path&gt;
+  &lt;&#x2F;svg&gt;&#96;;
+&#125;,false);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
-<h3 id="页面阅读统计"><a href="#页面阅读统计" class="headerlink" title="页面阅读统计"></a>页面阅读统计</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">busuanzi_count:      # 页面阅读统计</span><br><span class="line">  enable: true    #设true 开启</span><br><span class="line">  total_visitors: true     #总阅读人数 uv数</span><br><span class="line">  total_visitors_icon: user  #阅读总人数的图标</span><br><span class="line">  total_views: true  #总阅读次数 pv数</span><br><span class="line">  total_views_icon: eye  #阅读总次数的图标</span><br><span class="line">  post_views: true #开启内容阅读次数</span><br><span class="line">  post_views_icon: eye #内容页阅读数的图标</span><br></pre></td></tr></table></figure>
+<h3 id="页面阅读统计"><a href="#页面阅读统计" class="headerlink" title="页面阅读统计"></a>页面阅读统计</h3><pre class="line-numbers language-none"><code class="language-none">busuanzi_count:      # 页面阅读统计
+  enable: true    #设true 开启
+  total_visitors: true     #总阅读人数 uv数
+  total_visitors_icon: user  #阅读总人数的图标
+  total_views: true  #总阅读次数 pv数
+  total_views_icon: eye  #阅读总次数的图标
+  post_views: true #开启内容阅读次数
+  post_views_icon: eye #内容页阅读数的图标<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="代码样式设置"><a href="#代码样式设置" class="headerlink" title="代码样式设置"></a>代码样式设置</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  highlight_theme: normal  #样式主题 normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic</span><br><span class="line">  copy_button:  #复制按钮</span><br><span class="line">    enable: true  #开启</span><br><span class="line">    show_result: true  #复制成功提示</span><br><span class="line">    style: mac  #代码框样式  default | flat | mac</span><br></pre></td></tr></table></figure>
+<h3 id="代码样式设置"><a href="#代码样式设置" class="headerlink" title="代码样式设置"></a>代码样式设置</h3><pre class="line-numbers language-none"><code class="language-none">codeblock:
+  highlight_theme: normal  #样式主题 normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
+  copy_button:  #复制按钮
+    enable: true  #开启
+    show_result: true  #复制成功提示
+    style: mac  #代码框样式  default | flat | mac<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="顶部阅读进度条"><a href="#顶部阅读进度条" class="headerlink" title="顶部阅读进度条"></a>顶部阅读进度条</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reading_progress:</span><br><span class="line">  # Available values: top | bottom</span><br><span class="line">  position: top</span><br><span class="line">  color: &quot;#0a74daa1&quot;</span><br><span class="line">  height: 3px</span><br></pre></td></tr></table></figure>
+<h3 id="顶部阅读进度条"><a href="#顶部阅读进度条" class="headerlink" title="顶部阅读进度条"></a>顶部阅读进度条</h3><pre class="line-numbers language-none"><code class="language-none">reading_progress:
+  # Available values: top | bottom
+  position: top
+  color: &quot;#0a74daa1&quot;
+  height: 3px<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="静态资源压缩"><a href="#静态资源压缩" class="headerlink" title="静态资源压缩"></a>静态资源压缩</h3><p>Hexo自动生成的html中有很多空白的地方,会影响加载速度,所以最好还是压缩一下.这里使用 hexo-neat插件 或者安装 gulp来压缩。</p>
 <h4 id="hexo-neat压缩"><a href="#hexo-neat压缩" class="headerlink" title="hexo-neat压缩"></a>hexo-neat压缩</h4><p>#### 安装 hexo-neat</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat --save-dev</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-neat --save-dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>##### 在站点目录下的_config.yml的末尾，添加配置信息。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  # hexo-neat</span><br><span class="line">  # 博文压缩</span><br><span class="line">  neat_enable: true</span><br><span class="line">  # 压缩html</span><br><span class="line">  neat_html:</span><br><span class="line">    enable: true</span><br><span class="line">    exclude:  #排除的文件</span><br><span class="line">    </span><br><span class="line">  # 压缩css  跳过min.css</span><br><span class="line">  neat_css:</span><br><span class="line">    enable: true</span><br><span class="line">    exclude:</span><br><span class="line">      - &#x27;**/*.min.css&#x27;</span><br><span class="line">      </span><br><span class="line">  # 压缩js 跳过min.js</span><br><span class="line">  neat_js:</span><br><span class="line">    enable: true</span><br><span class="line">    mangle: true</span><br><span class="line">    output:</span><br><span class="line">    compress:</span><br><span class="line">    exclude:</span><br><span class="line">      - &#x27;**/*.min.js&#x27;</span><br><span class="line">      - &#x27;**/jquery.fancybox.pack.js&#x27;</span><br><span class="line">      - &#x27;**/index.js&#x27;  </span><br><span class="line">      - &#x27;**/love.js&#x27;</span><br><span class="line">  # 压缩博文配置结束</span><br><span class="line"># 注意上面的路径 **/* ,需要自己去配置正确的路径。，不然生成的是空白页面，当然你也可以删掉，全部压缩。</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">  # hexo-neat
+  # 博文压缩
+  neat_enable: true
+  # 压缩html
+  neat_html:
+    enable: true
+    exclude:  #排除的文件
+    
+  # 压缩css  跳过min.css
+  neat_css:
+    enable: true
+    exclude:
+      - &#39;**&#x2F;*.min.css&#39;
+      
+  # 压缩js 跳过min.js
+  neat_js:
+    enable: true
+    mangle: true
+    output:
+    compress:
+    exclude:
+      - &#39;**&#x2F;*.min.js&#39;
+      - &#39;**&#x2F;jquery.fancybox.pack.js&#39;
+      - &#39;**&#x2F;index.js&#39;  
+      - &#39;**&#x2F;love.js&#39;
+  # 压缩博文配置结束
+# 注意上面的路径 **&#x2F;* ,需要自己去配置正确的路径。，不然生成的是空白页面，当然你也可以删掉，全部压缩。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="gulp-压缩"><a href="#gulp-压缩" class="headerlink" title="gulp 压缩"></a>gulp 压缩</h4><p>##### 安装 gulp</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install gulp -g</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">npm install gulp -g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>##### cd 到博客的根目录(即站点目录)安装压缩静态文件要用的依赖包</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i gulp gulp-htmlclean gulp-htmlmin gulp-imagemin gulp-minify-css gulp-uglify --save</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">npm i gulp gulp-htmlclean gulp-htmlmin gulp-imagemin gulp-minify-css gulp-uglify --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>###### 在博客根目录下创建 gulpfile.js</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var gulp = require(&#x27;gulp&#x27;);</span><br><span class="line">var minifycss = require(&#x27;gulp-minify-css&#x27;);</span><br><span class="line">var uglify = require(&#x27;gulp-uglify&#x27;);</span><br><span class="line">var htmlmin = require(&#x27;gulp-htmlmin&#x27;);</span><br><span class="line">var htmlclean = require(&#x27;gulp-htmlclean&#x27;);</span><br><span class="line">var imagemin = require(&#x27;gulp-imagemin&#x27;);</span><br><span class="line"></span><br><span class="line">// 压缩html</span><br><span class="line">gulp.task(&#x27;minify-html&#x27;, function() &#123;</span><br><span class="line">    return gulp.src(&#x27;./public/**/*.html&#x27;)</span><br><span class="line">        .pipe(htmlclean())</span><br><span class="line">        .pipe(htmlmin(&#123;</span><br><span class="line">            removeComments: true,</span><br><span class="line">            minifyJS: true,</span><br><span class="line">            minifyCSS: true,</span><br><span class="line">            minifyURLs: true,</span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(&#x27;./public&#x27;))</span><br><span class="line">&#125;);</span><br><span class="line">// 压缩css</span><br><span class="line">gulp.task(&#x27;minify-css&#x27;, function() &#123;</span><br><span class="line">    return gulp.src(&#x27;./public/**/*.css&#x27;)</span><br><span class="line">        .pipe(minifycss(&#123;</span><br><span class="line">            compatibility: &#x27;ie8&#x27;</span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(gulp.dest(&#x27;./public&#x27;));</span><br><span class="line">&#125;);</span><br><span class="line">// 压缩js</span><br><span class="line">gulp.task(&#x27;minify-js&#x27;, function() &#123;</span><br><span class="line">    return gulp.src(&#x27;./public/js/**/*.js&#x27;)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(gulp.dest(&#x27;./public&#x27;));</span><br><span class="line">&#125;);</span><br><span class="line">// 压缩图片</span><br><span class="line">gulp.task(&#x27;minify-images&#x27;, function() &#123;</span><br><span class="line">    return gulp.src(&#x27;./public/images/**/*.*&#x27;)</span><br><span class="line">        .pipe(imagemin(</span><br><span class="line">        [imagemin.gifsicle(&#123;&#x27;optimizationLevel&#x27;: 3&#125;),</span><br><span class="line">        imagemin.jpegtran(&#123;&#x27;progressive&#x27;: true&#125;),</span><br><span class="line">        imagemin.optipng(&#123;&#x27;optimizationLevel&#x27;: 7&#125;),</span><br><span class="line">        imagemin.svgo()],</span><br><span class="line">        &#123;&#x27;verbose&#x27;: true&#125;))</span><br><span class="line">        .pipe(gulp.dest(&#x27;./public/images&#x27;))</span><br><span class="line">&#125;);</span><br><span class="line">// 默认任务</span><br><span class="line"></span><br><span class="line">// gulp 3 的写法</span><br><span class="line">//gulp.task(&#x27;default&#x27;, gulp.parallel(</span><br><span class="line">    &#x27;minify-html&#x27;,&#x27;minify-css&#x27;,&#x27;minify-js&#x27;,&#x27;minify-images&#x27;</span><br><span class="line">));</span><br><span class="line">//gulp 4</span><br><span class="line">gulp.task(&#x27;default&#x27;,gulp.series(gulp.parallel(&#x27;minify-css&#x27;, &#x27;minify-js&#x27;, &#x27;minify-html&#x27; ,&#x27;images&#x27;)))</span><br><span class="line"></span><br><span class="line">// 出现 gulp和gulp-cli版本不一致的问题，可能需要重新安装 npm i gulp-cli -g</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">var gulp &#x3D; require(&#39;gulp&#39;);
+var minifycss &#x3D; require(&#39;gulp-minify-css&#39;);
+var uglify &#x3D; require(&#39;gulp-uglify&#39;);
+var htmlmin &#x3D; require(&#39;gulp-htmlmin&#39;);
+var htmlclean &#x3D; require(&#39;gulp-htmlclean&#39;);
+var imagemin &#x3D; require(&#39;gulp-imagemin&#39;);
+
+&#x2F;&#x2F; 压缩html
+gulp.task(&#39;minify-html&#39;, function() &#123;
+    return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.html&#39;)
+        .pipe(htmlclean())
+        .pipe(htmlmin(&#123;
+            removeComments: true,
+            minifyJS: true,
+            minifyCSS: true,
+            minifyURLs: true,
+        &#125;))
+        .pipe(gulp.dest(&#39;.&#x2F;public&#39;))
+&#125;);
+&#x2F;&#x2F; 压缩css
+gulp.task(&#39;minify-css&#39;, function() &#123;
+    return gulp.src(&#39;.&#x2F;public&#x2F;**&#x2F;*.css&#39;)
+        .pipe(minifycss(&#123;
+            compatibility: &#39;ie8&#39;
+        &#125;))
+        .pipe(gulp.dest(&#39;.&#x2F;public&#39;));
+&#125;);
+&#x2F;&#x2F; 压缩js
+gulp.task(&#39;minify-js&#39;, function() &#123;
+    return gulp.src(&#39;.&#x2F;public&#x2F;js&#x2F;**&#x2F;*.js&#39;)
+        .pipe(uglify())
+        .pipe(gulp.dest(&#39;.&#x2F;public&#39;));
+&#125;);
+&#x2F;&#x2F; 压缩图片
+gulp.task(&#39;minify-images&#39;, function() &#123;
+    return gulp.src(&#39;.&#x2F;public&#x2F;images&#x2F;**&#x2F;*.*&#39;)
+        .pipe(imagemin(
+        [imagemin.gifsicle(&#123;&#39;optimizationLevel&#39;: 3&#125;),
+        imagemin.jpegtran(&#123;&#39;progressive&#39;: true&#125;),
+        imagemin.optipng(&#123;&#39;optimizationLevel&#39;: 7&#125;),
+        imagemin.svgo()],
+        &#123;&#39;verbose&#39;: true&#125;))
+        .pipe(gulp.dest(&#39;.&#x2F;public&#x2F;images&#39;))
+&#125;);
+&#x2F;&#x2F; 默认任务
+
+&#x2F;&#x2F; gulp 3 的写法
+&#x2F;&#x2F;gulp.task(&#39;default&#39;, gulp.parallel(
+    &#39;minify-html&#39;,&#39;minify-css&#39;,&#39;minify-js&#39;,&#39;minify-images&#39;
+));
+&#x2F;&#x2F;gulp 4
+gulp.task(&#39;default&#39;,gulp.series(gulp.parallel(&#39;minify-css&#39;, &#39;minify-js&#39;, &#39;minify-html&#39; ,&#39;images&#39;)))
+
+&#x2F;&#x2F; 出现 gulp和gulp-cli版本不一致的问题，可能需要重新安装 npm i gulp-cli -g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p style="height:20px"></p>
 
@@ -249,10 +460,15 @@
 <p>注意:gulp-babel 只能转换如箭头函数等一部分 ES6 的新特性 对 import 无能为力 ,如果需要压缩含有 import 特性的代码 需要使用 webpack 或者 browserify 等工具 具体教程网上有 我因为用不到也就没仔细研究</p>
 </blockquote>
 <p>###### 执行压缩</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">gulp </span><br><span class="line">hexo d</span><br><span class="line"></span><br><span class="line">//或者 hexo cl &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">hexo clean 
+hexo g 
+gulp 
+hexo d
+
+&#x2F;&#x2F;或者 hexo cl &amp;&amp; hexo g &amp;&amp; gulp &amp;&amp; hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="点击图片放大"><a href="#点击图片放大" class="headerlink" title="点击图片放大"></a>点击图片放大</h3><p>在 next/_config.yml 找到 fancybox</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fancybox: true</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">fancybox: true<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="Hexo博客提交百度和Google收录"><a href="#Hexo博客提交百度和Google收录" class="headerlink" title="Hexo博客提交百度和Google收录"></a>Hexo博客提交百度和Google收录</h2><p>### 站点地图</p>
 <p>站点地图即sitemap， 是一个页面，上面放置了网站上需要搜索引擎抓取的所有页面的链接。站点地图可以告诉搜索引擎网站上有哪些可供抓取的网页，以便搜索引擎可以更加智能地抓取网站。</p>
@@ -261,16 +477,35 @@
 <ul>
 <li>安装百度和Google的站点地图生成插件：</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">npm install hexo-generator-baidu-sitemap --save
+npm install hexo-generator-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 <li><p>修改配置文件</p>
 <p>修改站点配置文件_config.yml，添加以下内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 自动生成sitemap</span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none"># 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>此时，进入public目录，你会发现里面有sitemap.xml(提交给谷歌)和baidusitemap.xml (提交给百度)两个文件，这就是生成的站点地图。里面包含了网站上所有页面的链接，搜索引擎通过这两个文件来抓取网站页面。</p>
 <ul>
 <li><p>添加robots.txt</p>
 <p>robots.txt 是一种存放于网站根目录下的ASCII编码的文本文件，它的作用是告诉搜索引擎此网站中哪些内容是可以被爬取的，哪些是禁止爬取的。<br>在source目录下增加rebots.txt文件，网站生成后在网站的根目录站点目录/public/下。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: /</span><br><span class="line">Allow: /archives/</span><br><span class="line">Allow: /categories/</span><br><span class="line">Allow: /tags/</span><br><span class="line"></span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /js/</span><br><span class="line">Disallow: /css/</span><br><span class="line">Disallow: /fonts/</span><br><span class="line">Disallow: /vendors/</span><br><span class="line">Disallow: /fancybox/</span><br><span class="line"></span><br><span class="line">Sitemap: https://你的域名/sitemap.xml</span><br><span class="line">Sitemap: https://你的域名/baidusitemap.xml</span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">User-agent: *
+Allow: &#x2F;
+Allow: &#x2F;archives&#x2F;
+Allow: &#x2F;categories&#x2F;
+Allow: &#x2F;tags&#x2F;
+
+Disallow: &#x2F;vendors&#x2F;
+Disallow: &#x2F;js&#x2F;
+Disallow: &#x2F;css&#x2F;
+Disallow: &#x2F;fonts&#x2F;
+Disallow: &#x2F;vendors&#x2F;
+Disallow: &#x2F;fancybox&#x2F;
+
+Sitemap: https:&#x2F;&#x2F;你的域名&#x2F;sitemap.xml
+Sitemap: https:&#x2F;&#x2F;你的域名&#x2F;baidusitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 </li>
 <li><p><a href="https://search.google.com/">Google网站站长</a> 和 <a href="https://ziyuan.baidu.com/">百度站长</a></p>
@@ -283,11 +518,14 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 我能访问到下载的文件，就是不能验证成功，所以采用了取巧的方法，在自己的 github pages 仓库上的  Upload files 上传验证文件，即可通过。</span><br><span class="line">+  验证通过后，进入 站点地图，提交 sitemap.xml,等待验证。</span><br><span class="line"></span><br><span class="line">+ 浏览器网址中输入 site:自己的网址，就可以查看到自己的博客</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&gt; 我能访问到下载的文件，就是不能验证成功，所以采用了取巧的方法，在自己的 github pages 仓库上的  Upload files 上传验证文件，即可通过。
++  验证通过后，进入 站点地图，提交 sitemap.xml,等待验证。
+
++ 浏览器网址中输入 site:自己的网址，就可以查看到自己的博客<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <pre><code>  site:https://frontwhite.xyz
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+ 百度站长也是一样的做法。只是没有站点地图，在链接提交的页面，选择自动提交的 sitemap  提交，添加 自己的百度站点网址</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">+ 百度站长也是一样的做法。只是没有站点地图，在链接提交的页面，选择自动提交的 sitemap  提交，添加 自己的百度站点网址<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
   https://frontwhite.xyz/baidusitemap.xml
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+  Github上的博客，百度无法收录。把博客源码托管在[Coding Net](https://coding.net/)上，结合域名定向（不需要备案）的方法达到检索的目的，在百度蜘蛛爬取的时候，解析到coding pages。自行google教程。</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">+  Github上的博客，百度无法收录。把博客源码托管在[Coding Net](https:&#x2F;&#x2F;coding.net&#x2F;)上，结合域名定向（不需要备案）的方法达到检索的目的，在百度蜘蛛爬取的时候，解析到coding pages。自行google教程。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </code></pre>
 <ul>
 <li><a href="https://www.bing.com/webmaster">bing收录</a>和 google收录一样简单。先注册登录，必应收录有两种方式，一种使用刚刚谷歌的 Google Search Console 来进行收录。第二种是就是自己添加URL还可以直接导入你URL。</li>
@@ -297,7 +535,7 @@
 <li><a href="https://e.coding.net/signup?from=dev-tencent">coding官网</a> 注册登录，已被腾讯收购。所以登录就会来到腾讯云开发者平台，点击创建项目。</li>
 <li>添加SSH，这一步跟github一样。生成的公钥在 C:用户用户名.ssh，使用 命令行方式查看。</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\用户\用户名\.ssh&gt; cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">C:\用户\用户名\.ssh&gt; cat id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>在 coding的个人设置里添加SSH公钥即可。</p>
 <ul>
@@ -325,7 +563,12 @@
 <ul>
 <li>修改站点目录下的_config.yml, repo 用 https 或者 ssh 都行。</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: </span><br><span class="line">    github: https://github.com/whitedesignd/whitedesignd.github.io</span><br><span class="line">    coding: https://e.coding.net/frontwhite/SanbaiBlog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">deploy:
+  type: git
+  repo: 
+    github: https:&#x2F;&#x2F;github.com&#x2F;whitedesignd&#x2F;whitedesignd.github.io
+    coding: https:&#x2F;&#x2F;e.coding.net&#x2F;frontwhite&#x2F;SanbaiBlog.git
+  branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>提交代码，就可以看到github和coding上有更新的代码。</li>
@@ -356,12 +599,18 @@
 <li><p>而且可以只在需要的 repo 中安装。</p>
 </li>
 <li><p>并且，仅需要给 utterances 授权一次，其他凡是使用 utterances 的站点都不必再 额外授权 ，直接就可以评论。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;h5 style=&quot;font-size:15px;&quot;&gt;2.1 utterances评论系统安装&lt;/h5&gt;</span><br><span class="line">  </span><br><span class="line">1. 新建一个 github 存储库必须是公开的存放评论的地方。而不是私有的，这样我们的读者才可以查看以及发表评论。</span><br><span class="line">  </span><br><span class="line">2. 到 [Github APP](https://github.com/apps/utterances) 安装 utterances.点击 Install。 </span><br></pre></td></tr></table></figure></li>
+<pre class="line-numbers language-none"><code class="language-none">&lt;h5 style&#x3D;&quot;font-size:15px;&quot;&gt;2.1 utterances评论系统安装&lt;&#x2F;h5&gt;
+  
+1. 新建一个 github 存储库必须是公开的存放评论的地方。而不是私有的，这样我们的读者才可以查看以及发表评论。
+  
+2. 到 [Github APP](https:&#x2F;&#x2F;github.com&#x2F;apps&#x2F;utterances) 安装 utterances.点击 Install。 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](https://shop-element.oss-cn-shenzhen.aliyuncs.com/shop/next-%E9%85%8D%E7%BD%AE/utterances%20install.png)</span><br><span class="line"></span><br><span class="line">3. 选择 Only select repositories, 选择刚创建的仓库。</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">![](https:&#x2F;&#x2F;shop-element.oss-cn-shenzhen.aliyuncs.com&#x2F;shop&#x2F;next-%E9%85%8D%E7%BD%AE&#x2F;utterances%20install.png)
+
+3. 选择 Only select repositories, 选择刚创建的仓库。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="https://segmentfault.com/img/remote/1460000021486026" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4. 打开 https://utteranc.es/ ，在网站的底部有生成所需的 javascript。也可在根据下面代码的基础上更新自己的信息插入代码，只需要把下面代码中的 repo 改为你自己的Github用户名/刚才创建仓库的名称，然后在你需要显示评论的位置插入代码即可！</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">4. 打开 https:&#x2F;&#x2F;utteranc.es&#x2F; ，在网站的底部有生成所需的 javascript。也可在根据下面代码的基础上更新自己的信息插入代码，只需要把下面代码中的 repo 改为你自己的Github用户名&#x2F;刚才创建仓库的名称，然后在你需要显示评论的位置插入代码即可！<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre><code>&lt;script src=&quot;https://utteranc.es/client.js&quot;
       repo=&quot;[ENTER REPO HERE]&quot;  // repo改为你自己的Github用户名/刚才创建仓库的名称
       issue-term=&quot;pathname&quot;   // 命名issue的格式，默认pathname
@@ -370,7 +619,9 @@
       async&gt; 
 &lt;/script&gt;
 </code></pre>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">5. 在 layout/_partials/comments.swig 的 %- if page.comments % (大括号不能出现在字里或代码里，不然或出错)下添加以下代码：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  <pre class="line-numbers language-none"><code class="language-none">
+5. 在 layout&#x2F;_partials&#x2F;comments.swig 的 %- if page.comments % (大括号不能出现在字里或代码里，不然或出错)下添加以下代码：
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre><code>  &lt;div class=&quot;comments&quot;&gt;
     &lt;script src=&quot;https://utteranc.es/client.js&quot;
         repo=&quot;whitedesignd/hexo--comment&quot;
@@ -381,27 +632,60 @@
         async&gt;
     &lt;/script&gt;
   &lt;/div&gt;
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"># 添加菜单选项</span><br><span class="line"></span><br><span class="line">默认情况下，菜单导航栏有首页、归档、关于三个选项，除此之外笔者还添加了分类、标签和关于。在主题配置文件 中，找到menu属性，并去掉categories、 tags、about的的注释，如下图所示：</span><br><span class="line"></span><br><span class="line">然后在Hexo根目录执行指令如下：</span><br><span class="line"></span><br><span class="line">// 添加分类页面</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&#96;&#96;&#96;
+
+# 添加菜单选项
+
+默认情况下，菜单导航栏有首页、归档、关于三个选项，除此之外笔者还添加了分类、标签和关于。在主题配置文件 中，找到menu属性，并去掉categories、 tags、about的的注释，如下图所示：
+
+然后在Hexo根目录执行指令如下：
+
+&#x2F;&#x2F; 添加分类页面
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </code></pre>
 <p>hexo new page “categories”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">// 添加标签页面</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">
+&#x2F;&#x2F; 添加标签页面
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>hexo new page “tags”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">// 添加关于页面</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">
+&#x2F;&#x2F; 添加关于页面
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>hexo new page “about”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">执行完上述指令后，在Hexo根目录/source/文件夹下创建三个文件夹，命名分别为：categories、tags、about文件夹，在这些文件夹中分别会创建一个以index命名的Markdown文件，对这三个Markdown文件内容进行修改，使之分别为：</span><br><span class="line"></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">
+执行完上述指令后，在Hexo根目录&#x2F;source&#x2F;文件夹下创建三个文件夹，命名分别为：categories、tags、about文件夹，在这些文件夹中分别会创建一个以index命名的Markdown文件，对这三个Markdown文件内容进行修改，使之分别为：
+
+---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>title: categories<br>date: 2017-03-12 22:06:24</p>
 <p>type: “categories”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">
+
+
+---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>title: 标签<br>date: 2017-03-12 17:27:16`</p>
 <p>type: “tags”`</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">
+
+
+---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>title: about<br>date: 2017-03-12 22:07:26`</p>
 <p>type: “about”</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">完成文件的修改，然后部署Hexo即可完成菜单选项的添加。</span><br><span class="line"></span><br><span class="line"># 添加搜索功能</span><br><span class="line"></span><br><span class="line">笔者采用的是local search。</span><br><span class="line">安装 **hexo-generator-searchdb，**在站点的根目录下执行以下命令：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">
+完成文件的修改，然后部署Hexo即可完成菜单选项的添加。
+
+# 添加搜索功能
+
+笔者采用的是local search。
+安装 **hexo-generator-searchdb，**在站点的根目录下执行以下命令：
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>$ npm install hexo-generator-searchdb –save</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">编辑 站点配置文件 （站点根目录下），新增以下内容到任意位置：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">
+编辑 站点配置文件 （站点根目录下），新增以下内容到任意位置：
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>search:<br>  path: search.xml<br>  field: post<br>  format: html<br>  limit: 10000</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">编辑 主题配置文件 （主题目录下），启用本地搜索功能：</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">
+编辑 主题配置文件 （主题目录下），启用本地搜索功能：
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>#Local search</p>
 <p>local_search:<br>enable: true</p>
 <p>```</p>
