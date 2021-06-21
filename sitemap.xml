@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://yvonekit.github.io/2021/06/21/music-163-com/</loc>
+    
+    <lastmod>2021-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yvonekit.github.io/2021/06/21/youtube/</loc>
+    
+    <lastmod>2021-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://yvonekit.github.io/2021/06/20/test/</loc>
+    
+    <lastmod>2021-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://yvonekit.github.io/custom-name/index.html</loc>
     
     <lastmod>2021-06-20</lastmod>
@@ -10,13 +31,6 @@
   
   <url>
     <loc>https://yvonekit.github.io/2021/06/20/cloud%E8%87%AA%E5%90%AF%E5%8A%A8/</loc>
-    
-    <lastmod>2021-06-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://yvonekit.github.io/2021/06/20/test/</loc>
     
     <lastmod>2021-06-20</lastmod>
     
@@ -74,7 +88,7 @@
 
   <url>
     <loc>https://yvonekit.github.io/</loc>
-    <lastmod>2021-06-20</lastmod>
+    <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -82,21 +96,21 @@
   
   <url>
     <loc>https://yvonekit.github.io/tags/mac/</loc>
-    <lastmod>2021-06-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://yvonekit.github.io/tags/efi/</loc>
-    <lastmod>2021-06-20</lastmod>
+    <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://yvonekit.github.io/tags/next/</loc>
-    <lastmod>2021-06-20</lastmod>
+    <lastmod>2021-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://yvonekit.github.io/tags/efi/</loc>
+    <lastmod>2021-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
