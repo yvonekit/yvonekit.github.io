@@ -17,23 +17,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo mermaid插件</title>
-    <url>/2021/06/21/music-163-com/</url>
-    <content><![CDATA[<p>hexo-tag-gantt 安装<br>npm install <a href="https://github.com/threeq/hexo-tag-mermaid.git">https://github.com/threeq/hexo-tag-mermaid.git</a> –save</p>
-<pre class="mermaid">
-sequence 时序图
-Alice-&gt;&gt;Bob: Hello Bob, how are you?
-alt is sick
-    Bob-&gt;&gt;Alice: Not so good :(
-else is well
-    Bob-&gt;&gt;Alice: Feeling fresh like a daisy
-end
-opt Extra response
-    Bob-&gt;&gt;Alice: Thanks for asking
-end
-</pre>]]></content>
-  </entry>
-  <entry>
     <title>史上最完美800G1-USDT oc efi</title>
     <url>/2021/06/20/test/</url>
     <content><![CDATA[<h1 id="史上最完美800G1-USDT-oc-efi"><a href="#史上最完美800G1-USDT-oc-efi" class="headerlink" title="史上最完美800G1-USDT oc efi"></a>史上最完美800G1-USDT oc efi</h1><h2 id="OpenCore-HP-800G1-USDT-HD4600"><a href="#OpenCore-HP-800G1-USDT-HD4600" class="headerlink" title="OpenCore-HP-800G1-USDT-HD4600"></a>OpenCore-HP-800G1-USDT-HD4600</h2><p>OpenCore for HP 800G1 USDT with HD4600 and Intel WLAN</p>
@@ -136,11 +119,6 @@ valine:
       <tags>
         <tag>next</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>youtube</title>
-    <url>/2021/06/21/youtube/</url>
-    <content><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/J2Up8-JgMwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>12首80年代唱遍大街小巷的歌曲 : 心太軟 / 挪威的森林 / 把悲傷留給自己 / 朋友 / 手放開 / 浪人情歌【经典老歌500首】50首首動聽 曲曲感人 聽到第二首眼淚不知不覺滑下]]></content>
   </entry>
   <entry>
     <title>next主题高级配置</title>
