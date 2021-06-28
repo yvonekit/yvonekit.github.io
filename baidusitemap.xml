@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://yvonekit.github.io/2021/06/20/cloud%E8%87%AA%E5%90%AF%E5%8A%A8/</loc>
+    <lastmod>2021-06-24</lastmod>
+  </url>
+  <url>
     <loc>https://yvonekit.github.io/2021/06/21/music-163-com/</loc>
     <lastmod>2021-06-21</lastmod>
   </url>
@@ -11,10 +15,6 @@
   <url>
     <loc>https://yvonekit.github.io/2021/06/20/test/</loc>
     <lastmod>2021-06-21</lastmod>
-  </url>
-  <url>
-    <loc>https://yvonekit.github.io/2021/06/20/cloud%E8%87%AA%E5%90%AF%E5%8A%A8/</loc>
-    <lastmod>2021-06-20</lastmod>
   </url>
   <url>
     <loc>https://yvonekit.github.io/2021/06/19/valine/</loc>

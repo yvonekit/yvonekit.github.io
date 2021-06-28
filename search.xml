@@ -34,33 +34,6 @@ end
 </pre>]]></content>
   </entry>
   <entry>
-    <title>next v8.5.0 如何添加 Valine评论</title>
-    <url>/2021/06/19/valine/</url>
-    <content><![CDATA[<h2 id="next-v8-5-0-移除了-Valine"><a href="#next-v8-5-0-移除了-Valine" class="headerlink" title="next v8.5.0 移除了 Valine"></a>next v8.5.0 移除了 Valine</h2><p>需要继续使用请安装插件：<a href="https://github.com/next-theme/hexo-next-valine">https://github.com/next-theme/hexo-next-valine</a><br>需要注意将 <code>appid</code> 和 <code>appkey</code> 改为 <code>appId</code> 和 <code>appKey</code>） </p>
-<p>安装插件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> next-theme/hexo-next-valine<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<span id="more"></span>
-<p>将以下代码复制到theme _config.yml 608行 填写<code>appId</code> 和 <code>appKey</code> <code>serverURLs</code> serverurls 不写会报401错</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Valine</span>
-<span class="token comment"># For more information: https://valine.js.org, https://github.com/xCss/Valine</span>
-valine:
-  enable: <span class="token boolean">false</span>
-  appId:  <span class="token comment"># your leancloud application appid</span>
-  appKey:  <span class="token comment"># your leancloud application appkey</span>
-  serverURLs: <span class="token comment"># When the custom domain name is enabled, fill it in here</span>
-  placeholder: Just go go <span class="token comment"># comment box placeholder</span>
-  avatar: mm <span class="token comment"># gravatar style</span>
-  meta: <span class="token punctuation">[</span>nick, mail, link<span class="token punctuation">]</span> <span class="token comment"># Custom comment header</span>
-  pageSize: <span class="token number">10</span> <span class="token comment"># pagination size</span>
-  visitor: <span class="token boolean">false</span> <span class="token comment"># leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span>
-  comment_count: <span class="token boolean">true</span> <span class="token comment"># If false, comment count will only be displayed in post page, not in home page</span>
-  recordIP: <span class="token boolean">false</span> <span class="token comment"># Whether to record the commenter IP</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <tags>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>史上最完美800G1-USDT oc efi</title>
     <url>/2021/06/20/test/</url>
     <content><![CDATA[<h1 id="史上最完美800G1-USDT-oc-efi"><a href="#史上最完美800G1-USDT-oc-efi" class="headerlink" title="史上最完美800G1-USDT oc efi"></a>史上最完美800G1-USDT oc efi</h1><h2 id="OpenCore-HP-800G1-USDT-HD4600"><a href="#OpenCore-HP-800G1-USDT-HD4600" class="headerlink" title="OpenCore-HP-800G1-USDT-HD4600"></a>OpenCore-HP-800G1-USDT-HD4600</h2><p>OpenCore for HP 800G1 USDT with HD4600 and Intel WLAN</p>
@@ -135,6 +108,33 @@ valine:
 ]]></content>
       <tags>
         <tag>efi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>next v8.5.0 如何添加 Valine评论</title>
+    <url>/2021/06/19/valine/</url>
+    <content><![CDATA[<h2 id="next-v8-5-0-移除了-Valine"><a href="#next-v8-5-0-移除了-Valine" class="headerlink" title="next v8.5.0 移除了 Valine"></a>next v8.5.0 移除了 Valine</h2><p>需要继续使用请安装插件：<a href="https://github.com/next-theme/hexo-next-valine">https://github.com/next-theme/hexo-next-valine</a><br>需要注意将 <code>appid</code> 和 <code>appkey</code> 改为 <code>appId</code> 和 <code>appKey</code>） </p>
+<p>安装插件</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> next-theme/hexo-next-valine<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span id="more"></span>
+<p>将以下代码复制到theme _config.yml 608行 填写<code>appId</code> 和 <code>appKey</code> <code>serverURLs</code> serverurls 不写会报401错</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Valine</span>
+<span class="token comment"># For more information: https://valine.js.org, https://github.com/xCss/Valine</span>
+valine:
+  enable: <span class="token boolean">false</span>
+  appId:  <span class="token comment"># your leancloud application appid</span>
+  appKey:  <span class="token comment"># your leancloud application appkey</span>
+  serverURLs: <span class="token comment"># When the custom domain name is enabled, fill it in here</span>
+  placeholder: Just go go <span class="token comment"># comment box placeholder</span>
+  avatar: mm <span class="token comment"># gravatar style</span>
+  meta: <span class="token punctuation">[</span>nick, mail, link<span class="token punctuation">]</span> <span class="token comment"># Custom comment header</span>
+  pageSize: <span class="token number">10</span> <span class="token comment"># pagination size</span>
+  visitor: <span class="token boolean">false</span> <span class="token comment"># leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span>
+  comment_count: <span class="token boolean">true</span> <span class="token comment"># If false, comment count will only be displayed in post page, not in home page</span>
+  recordIP: <span class="token boolean">false</span> <span class="token comment"># Whether to record the commenter IP</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <tags>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
